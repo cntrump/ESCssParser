@@ -16,7 +16,7 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "73C3A21221AE0EB2009C4F62"
                BuildableName = "ESCssParser.framework"
-               BlueprintName = "ESCssParser"
+               BlueprintName = "ESCssParser-ios"
                ReferencedContainer = "container:ESCssParser.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
@@ -47,7 +47,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "73C3A21221AE0EB2009C4F62"
             BuildableName = "ESCssParser.framework"
-            BlueprintName = "ESCssParser"
+            BlueprintName = "ESCssParser-ios"
             ReferencedContainer = "container:ESCssParser.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
@@ -65,7 +65,7 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "73C3A21221AE0EB2009C4F62"
             BuildableName = "ESCssParser.framework"
-            BlueprintName = "ESCssParser"
+            BlueprintName = "ESCssParser-ios"
             ReferencedContainer = "container:ESCssParser.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
