@@ -9,6 +9,12 @@
 #import "ESCssParser.h"
 #include "ESCssTokens.h"
 
+#ifdef DEBUG
+#define DbgOutput   NSLog
+#else
+#define DbgOutput(fmt, ...)
+#endif
+
 static ESCssParser *__currentParser = nil;
 
 typedef NS_ENUM(NSUInteger, RuleType) {
@@ -119,7 +125,7 @@ void css_scan(const char *text, int token) {
         case TIME:
         case URI: {
             if (_state.type == RuleTypeCharset) {
-                printf("@charset: %s; \n", text);
+                DbgOutput(@"@charset: %s; \n", text);
             } else if (_state.flag == InsideValue) {
                 NSMutableString *value = _activeRuleSet[_activePropertyName];
                 if (value.length && _state.lastToken != FUNCTION) {
@@ -215,13 +221,13 @@ void css_scan(const char *text, int token) {
                     break;
                 }
                 default:
-                    printf("[%s] (%s)", text, cssTokenName[token]);
+                    DbgOutput(@"[%s] (%s)", text, cssTokenName[token]);
                     break;
             }
             break;
         }
         default:
-            printf("[%s] (%s)", text, cssTokenName[token]);
+            DbgOutput(@"[%s] (%s)", text, cssTokenName[token]);
             break;
     }
     _state.lastToken = token;
